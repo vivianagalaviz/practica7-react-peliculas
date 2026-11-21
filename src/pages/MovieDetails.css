@@ -1,0 +1,171 @@
+.md-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.md-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #1f2937;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.md-back:hover {
+  background: #4f46e5;
+  transform: translateX(-3px);
+}
+
+.md {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #111827;
+  color: #f9fafb;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.md-backdrop {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  filter: blur(3px);
+  transform: scale(1.05);
+}
+
+.md-content {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.md-poster {
+  flex-shrink: 0;
+  width: 300px;
+  height: fit-content;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.md-poster--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  background: #374151;
+  color: #9ca3af;
+}
+
+.md-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.md-title {
+  margin: 0 0 0.25rem;
+  font-size: 2.2rem;
+  line-height: 1.15;
+}
+
+.md-tagline {
+  margin: 0 0 1rem;
+  color: #a5b4fc;
+  font-style: italic;
+}
+
+.md-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: #d1d5db;
+}
+
+.md-meta span:not(:last-child)::after {
+  content: "•";
+  margin-left: 0.75rem;
+  color: #6b7280;
+}
+
+.md-rating {
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  background: #fbbf24;
+  color: #111827;
+  font-weight: 700;
+}
+
+.md-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.md-genre {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.25);
+  border: 1px solid #6366f1;
+  font-size: 0.85rem;
+}
+
+.md-subtitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+.md-overview {
+  margin: 0;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+.md-status {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .md-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+  }
+
+  .md-poster {
+    width: 70%;
+    max-width: 260px;
+  }
+
+  .md-info {
+    width: 100%;
+  }
+
+  .md-title {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .md-tagline,
+  .md-meta {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.md-meta .md-rating:not(:last-child)::after {
+  content: none;
+}
