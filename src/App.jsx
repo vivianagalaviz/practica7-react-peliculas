@@ -1,4 +1,7 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import LandingPage from "./pages/LandingPage";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
       </header>
 
       <main className="app-main">
-        <p>Próximamente podrás explorar nuestras películas.</p>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />} />
+        </Routes>
       </main>
     </div>
   );
