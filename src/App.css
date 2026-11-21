@@ -1,14 +1,30 @@
-#root {
-  min-height: 100vh;
-}
-
-.app-header {
-  padding: 24px;
+.title {
   text-align: center;
+  padding: 20px 0 10px;
+  margin: 0;
+  font-size: 2.2rem;
 }
 
-.app-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px;
+.app-footer {
+  margin-top: 50px;
+  padding: 24px 20px;
+  background-color: #1e293b;
+  border-top: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 75px;
+  height: auto;
+}
+
+.footer-info p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
 }
